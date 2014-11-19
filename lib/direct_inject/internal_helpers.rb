@@ -1,6 +1,8 @@
+require 'base64'
 require 'direct_inject'
 require 'direct_inject/errors'
 require 'map'
+require 'uri'
 
 module DirectInject
   module InternalHelpers
@@ -11,6 +13,12 @@ module DirectInject
       }
 
     private
+
+    def data_uri_for( asset )
+      prefix  = "data:#{ asset.content_type };base64,"
+      encoded = Base64.encode64( asset.to_s ).gsub( /\s+/ , '' )
+      "#{ prefix }#{ URI.encode_www_form_component encoded }"
+    end
 
     def asset_for!( source , options )
       environment =
@@ -37,10 +45,6 @@ module DirectInject
       return if options[ :extname ] == false
       extname = options[ :extname ] || ASSET_EXTENSIONS[ options[ :type ] ]
       extname if extname && File.extname( source ) != extname
-    end
-
-    def image_prefix_for( asset )
-      "data:image/#{ asset.pathname.extname[ 1 .. -1 ] };base64,"
     end
 
     def render( *sources )

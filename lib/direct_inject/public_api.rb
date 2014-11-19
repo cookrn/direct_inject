@@ -1,4 +1,3 @@
-require 'base64'
 require 'direct_inject/internal_helpers'
 require 'direct_inject/templates'
 require 'map'
@@ -14,8 +13,7 @@ module DirectInject
           'direct_inject_type',
           'image'
 
-        prefix  = image_prefix_for asset
-        encoded = "#{ prefix }#{ Base64.encode64( asset.to_s ) }"
+        encoded = data_uri_for asset
 
         Templates::Image.render \
           encoded,
