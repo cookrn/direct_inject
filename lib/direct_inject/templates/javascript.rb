@@ -4,7 +4,7 @@ module DirectInject
   module Templates
     class Javascript < Abstract
       def render
-        tagz { script_( tag_options( options ) ){ source } }
+        tagz { script_( tag_options options ){ source } }
       end
     end
   end
