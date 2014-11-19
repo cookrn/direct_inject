@@ -66,6 +66,12 @@ javascript_tag = DirectInject.render_javascript( 'main' )
 stylesheet_tag = DirectInject.render_stylesheet( 'application' )
 ```
 
+```html
+<img src="data:image/png;base64,MUMBOJUMBO">
+<script type="text/javascript">/* the codez */</script>
+<style type="text/css">/* the stylez */</style>
+```
+
 The output is just strings containing HTML that you can use as needed.
 
 ### Miscellaneous
@@ -80,12 +86,20 @@ DirectInject.render_stylesheet \
   :class => 'the-fanciest-styles-in-the-world'
 ```
 
+```html
+<style class="the-fanciest-styles-in-the-world">/* styles */</style>
+```
+
 Or, for another example, a few data attributes:
 
 ```ruby
 DirectInject.render_stylesheet \
   'application,
   :data => { 'attr1' => 'val1' , 'attr2' => 'val2' }
+```
+
+```html
+<style data-attr1="val1" data-attr2="val2">/* styles */</style>
 ```
 
 ## Contributing
