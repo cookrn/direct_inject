@@ -94,12 +94,37 @@ Or, for another example, a few data attributes:
 
 ```ruby
 DirectInject.render_stylesheet \
-  'application,
+  'application',
   :data => { 'attr1' => 'val1' , 'attr2' => 'val2' }
 ```
 
 ```html
 <style data-attr1="val1" data-attr2="val2">/* styles */</style>
+```
+
+DirectInject will automatically add some data attributes to all of the
+HTML it outputs:
+
+* `data-direct_inject_source`: the specified asset source
+* `data-direct_inject_type`: the asset type that defined the compilation code path for the source
+
+```html
+<img data-direct_inject_source="headshot.png" data-direct_inject_type="image">
+<script data-direct_inject_source="application" data-direct_inject_type="javascript"></script>
+<style data-direct_inject_source="site" data-direct_inject_type="stylesheet"></style>
+```
+
+DirectInject supports injecting multiple assets simultaneously.
+
+```ruby
+DirectInject.render_javascript \
+  'core.js.coffee',
+  'utils.js.coffee'
+```
+
+```html
+<script data-direct_inject_source="core.js.coffee">/* the codez */</script>
+<script data-direct_inject_source="utils.js.coffee">/* the codez */</script>
 ```
 
 ## Contributing
