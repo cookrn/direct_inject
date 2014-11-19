@@ -34,7 +34,7 @@ use them directly inline on the page. Hence, DirectInject was born.
 ### Usage from Rails
 
 DirectInject detects whether it has been loaded in Rails automagically.
-The only requirement is that you're using Rails >= 3.
+The only requirement is that you're using Rails >= 3.1.
 
 Once you're up and running, you have a few extra helpers in your views
 now:
