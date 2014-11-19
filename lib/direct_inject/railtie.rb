@@ -9,7 +9,7 @@ module DirectInject
 
     initializer 'direct_inject.view_helpers' do
       ActiveSupport.on_load :action_view do
-        include Rails::ViewHelpers
+        include DirectInject::Rails::ViewHelpers
       end
     end
   end
