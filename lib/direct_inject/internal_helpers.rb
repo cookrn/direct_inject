@@ -54,12 +54,11 @@ module DirectInject
           'direct_inject_source',
           source
 
-        result =
-          if block_given?
-            yield( asset , options ).to_s
-          else
-            ''
-          end
+        if block_given?
+          yield( asset , options ).to_s
+        else
+          ''
+        end
       end.join "\n"
     end
   end
