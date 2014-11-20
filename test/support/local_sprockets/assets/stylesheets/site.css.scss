@@ -1,0 +1,10 @@
+$color: yellowgreen;
+
+div {
+  background-color: $color;
+
+  span.highlight {
+    color: white;
+    text-decoration: underline;
+  }
+}

@@ -22,7 +22,7 @@ module DirectInject
 
     def asset_for!( source , options )
       environment =
-        options.fetch 'sprockets_environment' do
+        options.delete 'sprockets_environment' do
           DirectInject.sprockets_environment
         end
 
