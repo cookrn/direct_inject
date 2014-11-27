@@ -137,4 +137,4 @@ DirectInject.render_javascript \
 
 ## License
 
-MIT. See: [LICENSE](https://github.com/cookrn/direct_inject/blob/master/MIT-LICENSE)
+MIT. See: [LICENSE](https://github.com/cookrn/direct_inject/blob/master/LICENSE)
