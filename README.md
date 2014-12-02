@@ -1,6 +1,8 @@
 DirectInject
 ============
 
+[![Gem Version](https://badge.fury.io/rb/direct_inject.svg)](http://badge.fury.io/rb/direct_inject)
+
 A Sprockets-aware library that helps you inject assets inline into your HTML.
 
 ## Installation
