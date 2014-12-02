@@ -2,6 +2,9 @@ DirectInject
 ============
 
 [![Gem Version](https://badge.fury.io/rb/direct_inject.svg)](http://badge.fury.io/rb/direct_inject)
+[![Build Status](https://travis-ci.org/cookrn/direct_inject.svg?branch=master)](https://travis-ci.org/cookrn/direct_inject)
+[![Code Climate](https://codeclimate.com/github/cookrn/direct_inject/badges/gpa.svg)](https://codeclimate.com/github/cookrn/direct_inject)
+[![Coverage Status](https://img.shields.io/coveralls/cookrn/direct_inject.svg)](https://coveralls.io/r/cookrn/direct_inject)
 
 A Sprockets-aware library that helps you inject assets inline into your HTML.
 
